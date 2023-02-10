@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MovieDetailFragment"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lyGeneral">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/ivCabecera"
+            android:layout_height="140dp"
+            android:background="@color/purple_500"
+            android:layout_width="match_parent"/>
+
+
+        <TextView
+            android:textColor="@color/lightGrey"
+            android:id="@+id/tvAno"
+            android:layout_below="@+id/ivCabecera"
+            android:layout_marginLeft="320dp"
+
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:text="Año"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="130dp"
+            android:id="@+id/ivPortada"
+            android:layout_height="200dp"
+            android:background="@color/black"
+            android:layout_width="140dp"/>
+        <ProgressBar
+            android:progressTint="@color/amarillo"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progress"
+            android:min="0"
+            android:max="10"
+            android:progress="2"
+            android:indeterminate="false"
+            android:id="@+id/notaProgress"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/ivCabecera"
+            android:layout_marginTop="5.5dp"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:textColor="@color/lightGrey"
+            android:textStyle="bold"
+            android:id="@+id/tvNota"
+            android:layout_below="@+id/ivCabecera"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:text="Nota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivPortada"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/lightGrey"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="Prueba Titulo"
+                android:id="@+id/tvTituloPeli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="@color/lightGrey"
+                android:padding="30dp"
+                android:text="Prueba contenido"
+                android:id="@+id/tvContenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lyGeneral">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp">
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
